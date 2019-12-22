@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+//#include <boost/math/common_factor.hpp>
+using namespace std;
+int main(){
+  // cout<< boost::math::lcm(1.0,20)
+  int n1, n2, hcf, temp, lcm;
+    //cout << "Enter two numbers: ";
+    cin >> n1 >> n2;
+    hcf = n1;
+    temp = n2;
+
+    while(hcf != temp)
+    {
+        if(hcf > temp)
+            hcf -= temp;
+        else
+            temp -= hcf;
+    }
+    lcm = (n1 * n2) / hcf;
+    cout << lcm<<endl;
+    return 0;
+}
+
+
+
